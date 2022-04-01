@@ -34,7 +34,7 @@ pragma solidity ^0.6.0;
           emit Two(2, "Two");
       }
 
-      function _emitInternal() internal {
+      function _emitInternal() {
         emit One(1, "One", 0x00cFBbaF7DDB3a1476767101c12a0162e241fbAD2a0162e2410cFBbaF7162123);
       }
       function emitNested() public {
@@ -74,7 +74,7 @@ export const EVENTS_ABI = [
   'function emitArrays() public',
   'function doNotEmit() pure public',
   'function emitNested() public',
-  'function _emitInternal() internal'
+  'function _emitInternal()'
 ];
 
 // eslint-disable-next-line max-len

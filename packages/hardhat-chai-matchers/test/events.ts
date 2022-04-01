@@ -1,7 +1,7 @@
 import {expect, AssertionError} from 'chai';
 import {BigNumber, Contract, ContractFactory, ethers} from 'ethers';
 import {MockProvider} from '@ethereum-waffle/provider';
-import {EVENTS_ABI, EVENTS_BYTECODE} from '../contracts/Events';
+import {EVENTS_ABI, EVENTS_BYTECODE} from './contracts/Events';
 
 describe('INTEGRATION: Events', () => {
   const [wallet] = new MockProvider().getWallets();
@@ -169,7 +169,7 @@ describe('INTEGRATION: Events', () => {
         )
     ).to.be.eventually.rejectedWith(
       AssertionError,
-      'Expected "1" to be equal 2'
+      'expected 1 to equal 2'
     );
   });
 
@@ -260,7 +260,7 @@ describe('INTEGRATION: Events', () => {
     ).to.be.eventually.rejectedWith(
       AssertionError,
       // eslint-disable-next-line no-useless-escape
-      'Expected "1" to be equal 0'
+      'expected 1 to equal 0'
     );
   });
 
